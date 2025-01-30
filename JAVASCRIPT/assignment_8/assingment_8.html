@@ -1,0 +1,37 @@
+<!-- /Assignment 8: Toggle a CSS Class -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 8: Toggle Color</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 20px;
+        }
+        .highlight {
+            background-color: red;
+        }
+        button {
+            display: block;
+            margin: 20px;
+            padding: 10px 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"> </div>
+    <button id="toggleButton">Toggle Color</button>
+
+    <script>
+        function toggle_color() {
+            var box = document.querySelector(".box");
+            box.classList.toggle("highlight");
+        };
+        document.getElementById("toggleButton").addEventListener("click", toggle_color);   
+        
+    </script>
+</body>
+</html>

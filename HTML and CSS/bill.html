@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 2px;
+            
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="6">A complex table</th>
+        </tr>
+        <tr style="border-bottom: 1px solid black;">
+            <td colspan="3" style ="border-right: none; text-align: left;background-color: #f2f2f2;padding: 2px;">Invoice #123456789</td>
+            <td style="border-left: none;text-align: center;background-color: #f2f2f2;padding: 2px;" colspan="3">14 January 2025</td>
+        </tr>
+        <tr style="border-bottom: 1px solid black;">
+            <td style="border-right: none;text-align: left;padding: 2px;" colspan="3">
+                <b>Pay to:</b><br>
+                Acme Billing Co.<br>
+                123 Main St.<br>
+                Cityville, NA 12345
+            </td>
+            <td style="border-left: none;text-align: left;" colspan="3">
+                <b>Customer:</b><br>
+                John Smith<br>
+                321 Willow Way<br>
+                Southeast Northwetershire, MA 54321
+            </td>
+        </tr>
+        <tr style="border-bottom: 1px solid black;background-color: #f2f2f2;">
+            <th colspan="2" style="border-right: none;text-align: left;">Name / Description</th>
+            <th colspan="1" style="border-left: none; border-right: none;">Qty.</th>
+            <th colspan="1" style="border-left: none; border-right: none;">@</th>
+            <th colspan="2" style="border-left: none; text-align: left;">Cost</th>
+
+        </tr>
+        <tr style="border-bottom: 1px solid black;">
+            <td colspan="2" style="border-right: none;text-align: left;">Paperclips</td>
+            <td style="border-left: none; border-right: none;text-align: center;">1000</td>
+            <td style="border-left: none; border-right: none;text-align: center;">0.01</td>
+            <td colspan="2" style="border-left: none; text-align: left;">10.00</td>
+        </tr>
+        <tr style="border-bottom: 1px solid black;">
+            <td colspan="2" style="border-right: none;text-align: left;">Staples (box)</td>
+            <td style="border-left: none; border-right: none;text-align: center;">100</td>
+            <td style="border-left: none; border-right: none;text-align: center;">1.00</td>
+            <td colspan="2" style="border-left: none;text-align: left;">100.00</td>
+        </tr>
+        <tr style="border-bottom: 1px solid black;">
+            <td colspan="4" style="border-right: none;background-color: #f2f2f2;"><b>Subtotal</b></td>
+            <td colspan="2" style="border-left: none;">110.00</td>
+        </tr>
+        <tr style="border-bottom: 1px solid black;">
+            <td colspan="3" style="border-right: none;background-color: #f2f2f2;"><b>Tax</b></td>
+            <td colspan="1" style="border-right: none;border-left: none;text-align: center;" >8%</td>
+            <td colspan="2" style="border-left: none;">8.80</td>
+        </tr>
+        <tr style="border-bottom: 1px solid black;">
+            <td colspan="4" style="border-right: none;background-color: #f2f2f2;"><b>Grand Total</b></td>
+            <td colspan="2" style="border-left: none;">$118.80</td>
+        </tr>
+    </table>
+</body>
+</html>

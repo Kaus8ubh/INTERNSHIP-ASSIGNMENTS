@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seminar Schedule</title>
+    <style>
+        table {
+            width: 100%;
+            /* border-collapse: collapse; */
+            margin: 20px auto;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .yellow {
+            background-color: #ffffcc;
+        }
+        .green {
+            background-color: #ccffcc;
+        }
+        .purple {
+            background-color: #e5ccff;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        
+        <tr>
+            <td rowspan="3">Day</td>
+            <td colspan="4">Seminar</td>
+        </tr>
+        <tr>
+            <td colspan="2">Schedule</td>
+            <td rowspan="2" colspan="2">Topic</td>
+        </tr>
+        <tr>
+            <td>Begin</td>
+            <td>End</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Monday</td>
+            <td rowspan="2" class="yellow">8:00 am</td>
+            <td rowspan="2" class="purple">5:00 pm</td>
+            <td colspan="2">Introduction to XML </td>
+
+        </tr>
+        <tr>
+            <td colspan="2">Validity:DTD and Relax NG</td>
+        </tr>        
+            <td rowspan="3">Tuesday</td>
+            <td class="yellow">8:00 am</td>
+            <td class="green">11:00 am</td>
+            <td style="border-bottom: none;" >XPath</td>
+        </tr>
+        <tr>
+            <td class="green">2:00 pm</td>
+            <td class="purple">5:00 pm</td>
+            <td style="border-top: none;border-bottom: none;" ></td>
+        </tr>
+        <tr>
+            <td class="green">11:00 am</td>
+            <td class="yellow">2:00 pm</td>
+            <td style="border-top: none;" >Transformations</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td class="yellow">8:00 am</td>
+            <td class="green">12:00 pm</td>
+            <td>XSL Formatting Objects</td>
+        </tr>
+    </table>
+</body>
+</html>

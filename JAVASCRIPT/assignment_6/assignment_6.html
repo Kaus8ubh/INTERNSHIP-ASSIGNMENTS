@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 6: Dynamic List</title>
+</head>
+<body>
+    <button id="addItem">Add Item</button>
+    <ul id="itemList"></ul>
+
+    <script>
+        
+        function addItem() {
+            var ul = document.getElementById("itemList");
+            var li = document.createElement("li");
+            //number of items currently in the list and increment it by 1
+            var itemCount = ul.getElementsByTagName("li").length + 1;
+            //text content of the list item to "item" + itemCount
+            li.textContent = "Item " + itemCount;
+            ul.appendChild(li);
+        }
+
+        document.getElementById("addItem").addEventListener("click", addItem);
+
+    </script>
+</body>
+</html>
