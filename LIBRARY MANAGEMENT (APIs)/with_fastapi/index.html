@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Library Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Library Management</h1>
+
+  <!-- Section to display the list of books -->
+  <h2>Books</h2>
+  <ol id="book-list"></ol>
+  <button id="show-books-btn" type="button" onclick="fetchBooks()">Show Books</button>
+  <button id="hide-books-btn" type="button" onclick="hideBooks()" style="display: none;">Hide Books</button>
+
+  <!-- Button to reveal the Add Book form -->
+  <button id="show-add-form-btn" type="button" onclick="showAddBookForm()">Add Book</button>
+
+  <!-- Hidden Add Book Form -->
+  <div id="add-book-form-container" style="display: none;">
+    <h2>Add a New Book</h2>
+    <form id="add-book-form">
+      <label for="book-title">Title:</label>
+      <input type="text" id="book-title" required>
+      <br>
+      <label for="book-author">Author:</label>
+      <input type="text" id="book-author" required>
+      <br>
+      <label for="book-quantity">Quantity:</label>
+      <input type="number" id="book-quantity" required>
+      <br>
+      <button type="button" onclick="submitAddBook()">Submit</button>
+      <button type="button" onclick="hideAddBookForm()">Cancel</button>
+    </form>
+  </div>
+
+  <!-- button to delete book form -->
+  <button id="show-delete-form-btn" type="button" onclick="showDeleteBookForm()">Delete a Book</button>
+  <div id="delete-book-form-container" style="display: none;">
+    <h2>Delete a Book</h2>
+    <form id="delete-book-form">
+      <label for="book-id">Book ID:</label>
+      <input type="number" id="book-id" required>
+      <br>
+      <button type="button" onclick="deletebook()">Submit</button>
+      <button type="button" onclick="hideDeleteBookForm()">Cancel</button>
+    </form>
+  </div>
+
+  <!-- Section to display the list of users -->
+  <h2>Users</h2>
+  <ol id="user-list"></ol>
+  <button id="show-users-btn" type="button" onclick="fetchUsers()">Show Users</button>
+  <button id="hide-users-btn" type="button" onclick="hideUsers()" style="display: none;">Hide Users</button>
+
+  <!-- Button to reveal the Add User form -->
+  <button id="show-add-user-form-btn" type="button" onclick="showAddUserForm()">Add User</button>
+
+  <!-- Hidden Add User Form -->
+  <div id="add-user-form-container" style="display: none;">
+    <h2>Add a New User</h2>
+    <form id="add-user-form">
+      <label for="user-name">Name:</label>
+      <input type="text" id="user-name" required>
+      <button type="button" onclick="submitAddUser()">Submit</button>
+      <button type="button" onclick="hideAddUserForm()">Cancel</button>
+    </form>
+  </div>
+
+  <!-- button to delete user form -->
+  <button id="show-delete-user-form-btn" type="button" onclick="showDeleteUserForm()">Delete a User</button>
+  <div id="delete-user-form-container" style="display: none;">
+    <h2>Delete a User</h2>
+    <form id="delete-user-form">
+      <label for="user-id">User ID:</label>
+      <input type="number" id="user-id" required>
+      <br>
+      <button type="button" onclick="deleteUser()">Submit</button>
+      <button type="button" onclick="hideDeleteUserForm()">Cancel</button>
+    </form>
+  </div>
+
+  <h3>Allocate/Deallocate Books</h3>
+  <!-- List of allocated books -->
+  <ol id="allocated-list"></ol>
+  <button id="show-allocated-btn" type="button" onclick="showAllocatedBooks()">Show Allocations</button>
+  <button id="hide-allocated-btn" type="button" onclick="hideAllocatedBooks()" style="display: none;">Hide Allocations</button>
+
+  <!-- allocate book to user form -->
+  <button id="show-allocate-form-btn" type="button" onclick="showAllocateForm()">Allocate a Book</button>
+  <div id="allocate-form-container" style="display: none;">
+    <h2>Allocate a Book</h2>
+    <form id="allocate-form">
+      <label for="allocate-user-id">User ID:</label>
+      <input type="number" id="allocate-user-id" required>
+      <br>
+      <label for="allocate-book-id">Book ID:</label>
+      <input type="number" id="allocate-book-id" required>
+      <br>
+      <label for="allocate_dt">from</label>
+      <input type="date" id="allocate_dt" required>
+      <br>
+      <label for="return_dt">up to</label>
+      <input type="date" id="return_dt" required>
+      <br>
+      <button type="button" onclick="allocateBook()">Submit</button>
+      <button type="button" onclick="hideAllocateBookForm()">Cancel</button>
+    </form>
+  </div>
+
+  <!-- deallocate book from user form -->
+  <button id="show-deallocate-form-btn" type="button" onclick="showDeallocateBookForm()">Deallocate a Book</button>
+  <div id="deallocate-form-container" style="display: none;">
+    <h2>Deallocate a Book</h2>
+    <form id="deallocate-form">
+      <label for="deallocate-user-id">User ID:</label>
+      <input type="number" id="deallocate-user-id" required>
+      <br>
+      <label for="deallocate-book-id">Book ID:</label>
+      <input type="number" id="deallocate-book-id" required>
+      <br>
+      <button type="button" onclick="deallocateBook()">Submit</button>
+      <button type="button" onclick="hideDeallocateBookForm()">Cancel</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
