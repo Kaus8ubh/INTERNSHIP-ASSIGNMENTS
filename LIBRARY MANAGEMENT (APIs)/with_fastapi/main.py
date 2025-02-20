@@ -12,6 +12,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(book_routes.router)
-app.include_router(user_routes.router)
-app.include_router(library_routes.router)
+app.include_router(book_routes.router, prefix="/books")
+app.include_router(user_routes.router, prefix="/users")
+app.include_router(library_routes.router, prefix="/library")

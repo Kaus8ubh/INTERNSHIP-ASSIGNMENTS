@@ -4,7 +4,7 @@ from models.library import AllocationCreate, LibraryAllocation
 from services.library_services import LibraryService
 from typing import List, Optional
 
-router = APIRouter(prefix="/library", tags=["library"])
+router = APIRouter()
 library_service = LibraryService()
 
 @router.post("/allocate")

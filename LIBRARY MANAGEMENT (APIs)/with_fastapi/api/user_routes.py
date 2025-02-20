@@ -4,7 +4,7 @@ from models.user import UserCreate, User
 from services.user_services import UserService
 from typing import List
 
-router = APIRouter(prefix="/users", tags=["users"])
+router = APIRouter()
 user_service = UserService()
 
 @router.get("/", response_model=List[User])
